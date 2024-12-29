@@ -1,0 +1,153 @@
+/* 
+ * WALBOX STYLE SHEET
+ * By Shivasis Biswal (http://www.hostspacer.com)
+ * Copyright (c) 2014 Krushna Biswal
+ * Licensed under the MIT License: http://www.opensource.org/licenses/mit-license.php
+ *
+*/
+
+.walbox-overlay {
+	position:fixed;
+	*position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	width:100%;
+	height:100%;
+	margin:0 auto;
+	padding:0;
+	background:#000;
+	opacity:0.5;
+	filter:alpha(opacity=50);
+	-moz-opacity: 0.5;
+	display:none;
+	z-index:9999;
+}
+
+* html .walbox-overlay {   
+	position: absolute; 
+	height: expression(document.body.scrollHeight > document.body.offsetHeight ? document.body.scrollHeight : document.body.offsetHeight + 'px');
+}
+
+.walbox-modal {
+	background: none repeat scroll 0% 0% #fff;
+	-webkit-box-shadow: 0 0 5px #000;
+	-moz-box-shadow: 0 0 5px #000;
+	box-shadow: 0 0 5px #000;
+	position: fixed;
+	*position: absolute;
+	top: 50%;
+	left: 50%;
+    transform: translateX(-50%), translateY(-50%);
+	z-index: 999999; 
+	display: none;
+	margin: 0 auto;
+	padding: 0;
+	opacity: 1;
+	filter: alpha(opacity=100);
+	-moz-opacity:1;
+}
+
+* html .walbox-modal {position:absolute;}
+
+.walbox-modal.large {
+	max-width: 800px;
+}
+
+.walbox-modal.medium {
+	max-width: 600px;
+}
+
+.walbox-modal.small {
+	max-width: 300px;
+}
+
+@media only screen and (max-width:760px) {
+    .walbox-modal.large {
+			max-width: 700px;
+	}
+	.walbox-modal.medium {
+		max-width: 500px;
+	}
+	.walbox-modal.small {
+		max-width: 300px;
+	}
+}
+
+@media only screen and (max-width:480px) {
+
+	.walbox-modal.large {
+			max-width: 400px;
+	}
+	.walbox-modal.medium {
+		max-width: 300px;
+	}
+	.walbox-modal.small {
+		max-width: 200px;
+	}
+	
+}
+
+.walbox-iframe {
+	overflow-y: scroll;
+	overflow-x: none;
+	border: none;
+	width: 100% !important;
+	height: 100% !important;
+	padding: 0;
+	margin:0 auto; 
+}
+
+.walbox-content { 
+	padding: 20px; 
+	margin:0 auto; 
+	background: none repeat scroll 0% 0% #fff; 
+	overflow-x: hidden;
+	overflow-y: auto;
+	min-height: 30px;
+}
+
+.walbox-title { 
+	margin:0 auto; 
+	padding: 10px 20px; 
+	font-size: 16px; 
+	font-weight: bold;
+	overflow: hidden; 
+	background: none repeat scroll 0% 0% #e2e2e2; 
+	border-bottom:1px solid #dedede; 
+	user-select: none;
+}
+
+.walbox-title.movable:hover {
+	cursor: move;
+	user-select: none;
+}
+
+.walbox-close { 
+	position: absolute; 
+	top: 10px; 
+	right: 10px; 
+	width: 14px; 
+	height: 14px; 
+	margin:0;
+	padding:0;
+	display:block;
+	cursor:pointer;
+	overflow:hidden;
+	opacity:0.5;
+	filter: alpha(opacity=50);
+	-moz-opacity: 0.5;
+	transform: scale(1.5);
+	color: #656565;
+	text-align:center;
+	text-decoration:none;
+}
+
+.walbox-close:hover{
+	color: #222;
+	text-decoration:none;
+	opacity:0.99;
+	filter: alpha(opacity=99);
+	-moz-opacity: 0.99;
+}
